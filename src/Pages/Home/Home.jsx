@@ -2,7 +2,6 @@ import Hero from "./Hero";
 import Stack from "./Stack";
 import Core from "./Core";
 import Collage from "./Collage";
-import DynamicFooter from "../../components/DynamicFooter";
 
 const Home = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const BentoItem = ({children, span = "md:col-span-1"}) => (
     <div data-aos="fade-up"
