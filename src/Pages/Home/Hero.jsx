@@ -93,10 +93,10 @@ useEffect(() => {
         </p>
 
         {/* Botones de Acción */}
-        <div className="flex flex-wrap gap-4 mt-12">
+        <div className="flex flex-wrap mt-12 items-center justify-center gap-4">
           <a
-            className="border border-[#2a2a2a] py-2 
-            sm:py-3 px-8 sm:px-5 rounded-full sm:text-lg
+            className="border border-[#2a2a2a] py-2
+            sm:py-3 px-6 sm:px-5 rounded-full sm:text-lg
             text-sm font-semibold tracking-wider transition-all 
             duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a] text-white"
             href="https://github.com/Wison-tech"
@@ -108,7 +108,7 @@ useEffect(() => {
 
           <a
             className="border border-[#2a2a2a] py-2 
-            sm:py-3 px-8 sm:px-7 rounded-full sm:text-lg
+            sm:py-3 px-6 sm:px-7 rounded-full sm:text-lg
             text-sm font-semibold tracking-wider transition-all 
             duration-300 hover:bg-[#1a1a1a] bg-gray-300 text-black hover:text-white"
             href="https://www.linkedin.com/in/wilson-mauricio-rodriguez-rodriguez"
