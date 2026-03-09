@@ -93,7 +93,7 @@ useEffect(() => {
         </p>
 
         {/* Botones de Acción */}
-        <div className="flex flex-wrap mt-12 items-center justify-center gap-4">
+        <div className="flex flex-wrap mt-12 items-center justify-center gap-4 lg:justify-start md:justify-start">
           <a
             className="border border-[#2a2a2a] py-2
             sm:py-3 px-6 sm:px-5 rounded-full sm:text-lg
