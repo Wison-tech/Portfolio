@@ -67,7 +67,7 @@ const DynamicFooter = () => {
               <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse shadow-[0_0_12px_#3b82f6]" />
               <span className="text-[10px] font-mono text-blue-500/80 uppercase tracking-[0.4em]">Node Active</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter leading-none">AZOTH</h2>
+            <h2 translate="no" className="text-4xl md:text-5xl font-black text-white italic tracking-tighter leading-none">AZOTH</h2>
             <p className="text-[10px] md:text-[11px] text-gray-500 font-mono leading-relaxed uppercase tracking-widest opacity-70">
               Full Stack Architecture <br className="hidden md:block"/> // Visual Engineering
             </p>

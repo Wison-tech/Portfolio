@@ -21,6 +21,7 @@ const Header = () => {
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1500"
+        translate="no"
         className="text-3xl md:text-4xl lg:text-5xl font-light m-0"
       >
         <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter leading-none">AZOTH</h2>

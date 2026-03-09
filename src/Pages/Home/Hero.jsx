@@ -75,7 +75,7 @@ useEffect(() => {
           Full Stack Developer
         </h1>
 
-        <h5
+        <h5 translate="no"
           className="my-5 text-1xl font-regular tracking-wider
           text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
         >

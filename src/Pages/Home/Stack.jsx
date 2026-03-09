@@ -47,7 +47,7 @@ const Stack = () => {
           hover:border-white"
           >
             <i className={`bx ${tech.icon} text-3xl`} style={{color: tech.color}}></i>
-            <span className="text-1xl lg:text-3xl md:text-2xl text-gray-300 font-medium
+            <span translate="no" className="text-1xl lg:text-3xl md:text-2xl text-gray-300 font-medium
             tracking-wide">
               {tech.name}
             </span>
