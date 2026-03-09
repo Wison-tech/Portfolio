@@ -5,12 +5,15 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Hero = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      once: true,
-    });
-  }, []);
+ useEffect(() => {
+  AOS.init({
+    duration: 800, // Menos tiempo (1500ms es muy lento y se siente pesado)
+    once: true,
+    disable: 'mobile', // Opcional: desactiva en móviles si el lag persiste
+    useClassNames: true, // Usa clases de CSS en lugar de JS para animar
+    initClassName: false, 
+  });
+}, []);
 
   return (
     <main
@@ -103,7 +106,7 @@ const Hero = () => {
         data-aos-easing="ease-in-back"
         data-aos-delay="300"
         data-aos-offset="0"
-        data-aos-duration="3000"
+        data-aos-duration="1500"
         className="absolute top-[-20%] bottom-0 lg:left-[25%]
  sm:left-[-2%] h-full"
         scene="https://draft.spline.design/VKwS9DEkdnA-hAhR/scene.splinecode"

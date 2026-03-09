@@ -9,5 +9,8 @@
         relative font-sans h-screen overflow-x-hidden
     }
 
-
+[data-aos] {
+  will-change: transform, opacity;
+  backface-visibility: hidden; /* Evita parpadeos en Chrome */
+}
 }
