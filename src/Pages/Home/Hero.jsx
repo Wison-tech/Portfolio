@@ -2,79 +2,94 @@ import "boxicons/css/boxicons.min.css";
 import Spline from "@splinetool/react-spline";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import splineImg from "../../assets/img/spline_robot.png";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
- useEffect(() => {
-  AOS.init({
-    duration: 800, // Menos tiempo (1500ms es muy lento y se siente pesado)
-    once: true,
-    disable: 'mobile', // Opcional: desactiva en móviles si el lag persiste
-    useClassNames: true, // Usa clases de CSS en lugar de JS para animar
-    initClassName: false, 
-  });
-}, []);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // 1. Detección de dispositivo para evitar cargar Spline en móviles
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    // 2. Inicialización de AOS con ajustes de rendimiento
+    AOS.init({
+      duration: 800,
+      once: true,
+      disable: 'mobile', // Desactivar en móvil para máxima fluidez
+    });
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
 
   return (
     <main
       className="flex lg:mt-20 flex-col lg:flex-row
-  items-center justify-between 
-  min-h-[calc(90vh-6rem)]
-  px-6 sm:px-10 lg:px-20"
+      items-center justify-between 
+      min-h-[calc(90vh-6rem)]
+      px-6 sm:px-10 lg:px-20 relative overflow-x-hidden"
     >
+      {/* Columna de Texto */}
       <div
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
-        className="max-w-xl z-10 mt-[90%] 
-    md:mt-[60%] lg:mt-0"
+        className="max-w-xl z-10 mt-[80%] md:mt-[50%] lg:mt-0"
       >
-        {/* Tag box-with gradient border*/}
+        {/* Tag Wilson Rodriguez */}
         <div
           className="relative w-[95%] sm:w-48 h-10
-        bg-gradient-to-r from-[#132542] to-[#3B82F6]
-        shadow-[0_0_15px_rgba(255,255,255,0.4)]
-        rounded-full"
+          bg-gradient-to-r from-[#132542] to-[#3B82F6]
+          shadow-[0_0_15px_rgba(255,255,255,0.4)]
+          rounded-full"
         >
           <div
             className="absolute inset-[3px]
             bg-black rounded-full flex items-center
-            justify-center gap-1"
+            justify-center gap-1 text-white"
           >
             <i className="bx bx-diamond"></i>
             Wilson Rodriguez
           </div>
         </div>
-        {/* main heading */}
+
+        {/* Heading Principal */}
         <h1
           className="text-3xl sm:text-4xl md:text-5xl
-        lg:text-6xl font-semibold tracking-wider my-5"
+          lg:text-6xl font-semibold tracking-wider my-5 text-white"
         >
           Full Stack Developer
         </h1>
+
         <h5
-          className=" my-5 text-1xl font-regular tracking-wider
-        text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
+          className="my-5 text-1xl font-regular tracking-wider
+          text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
         >
           React · Flutter · Django · PostgreSQL · Docker
         </h5>
-        {/* Description */}
+
+        {/* Descripción */}
         <p
           className="text-base sm:text-lg tracking-wider
-        text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
+          text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
         >
           Building modern web and mobile solutions with React, Flutter, and
           Django. Focused on scalable backend architectures and seamless user
           experiences.
         </p>
 
-        {/* Buttons */}
-        <div className="flex gap-4 mt-12 ">
+        {/* Botones de Acción */}
+        <div className="flex flex-wrap gap-4 mt-12">
           <a
-            className=" border border-[#2a2a2a] py-2 
+            className="border border-[#2a2a2a] py-2 
             sm:py-3 px-8 sm:px-5 rounded-full sm:text-lg
             text-sm font-semibold tracking-wider transition-all 
-            duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a]"
+            duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a] text-white"
             href="https://github.com/Wison-tech"
             target="_blank"
             rel="noopener noreferrer"
@@ -83,7 +98,7 @@ const Hero = () => {
           </a>
 
           <a
-            className=" border border-[#2a2a2a] py-2 
+            className="border border-[#2a2a2a] py-2 
             sm:py-3 px-8 sm:px-7 rounded-full sm:text-lg
             text-sm font-semibold tracking-wider transition-all 
             duration-300 hover:bg-[#1a1a1a] bg-gray-300 text-black hover:text-white"
@@ -92,25 +107,40 @@ const Hero = () => {
             rel="noopener noreferrer"
           >
             Let's Connect{" "}
-            <i
-              className="bx 
-                bx-link-external"
-            ></i>
+            <i className="bx bx-link-external"></i>
           </a>
         </div>
       </div>
 
-      {/*3d model */}
-      <Spline
+      {/* Contenedor del Visual (3D o Imagen) */}
+      <div 
+        className="absolute top-[-15%] lg:top-[-20%] bottom-0 lg:left-[25%]
+        sm:left-[-2%] h-full w-full lg:w-[70%] z-0 pointer-events-none"
+      >
+        {isMobile ? (
+          /* Renderiza solo imagen en Celulares/Tablets */
+          <div className="w-full h-full flex items-center justify-center p-7">
+            <img
+              src={splineImg}
+              alt="Wilson Tech Visual"
+              className="w-full max-w-[500px] h-auto object-contain opacity-60 mt-20"
+              data-aos="fade-up"
+            />
+          </div>
+        ) : (
+          /* Renderiza Spline solo en Desktop */
+          <Spline
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="300"
         data-aos-offset="0"
         data-aos-duration="1500"
-        className="absolute top-[-20%] bottom-0 lg:left-[25%]
+        className="absolute top-[20%] bottom-0 lg:left-[25%]
  sm:left-[-2%] h-full"
         scene="https://draft.spline.design/VKwS9DEkdnA-hAhR/scene.splinecode"
       />
+        )}
+      </div>
     </main>
   );
 };
