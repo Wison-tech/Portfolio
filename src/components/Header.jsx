@@ -23,7 +23,7 @@ const Header = () => {
         data-aos-duration="1500"
         className="text-3xl md:text-4xl lg:text-5xl font-light m-0"
       >
-        AZOTH
+        <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter leading-none">AZOTH</h2>
       </Link>
 
       {/* DESKTOP NAVIGATION */}
