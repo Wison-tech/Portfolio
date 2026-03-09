@@ -119,7 +119,7 @@ const Hero = () => {
       >
         {isMobile ? (
           /* Renderiza solo imagen en Celulares/Tablets */
-          <div className="w-full h-full flex items-center justify-center p-7">
+          <div className=" absolute top-[-10%] w-full h-full flex p-7">
             <img
               src={splineImg}
               alt="Wilson Tech Visual"
