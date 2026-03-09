@@ -38,7 +38,7 @@ const core = () => {
         </header>
         <p
           className="text-base sm:text-lg tracking-wider
-        text-gray-400 max-w-[25rem] lg:max-w-[30rem] text-center py-4"
+        text-gray-400 max-w-[25rem] lg:max-w-[30rem] text-center py-4 px-4"
         >
           Professional standards and methodologies applied to build reliable,
           high-quality software.
