@@ -27,7 +27,7 @@ const core = () => {
     <main
       className="pt-10 lg:pt-0 flex lg:mt-20 flex-col
   items-center justify-center
-  px-6 sm:px-10 lg:px-15"
+  sm:px-10 lg:px-15"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <header className="text-center mb-8">
@@ -46,7 +46,7 @@ const core = () => {
       </div>
       <div
         className="flex flex-wrap justify-center gap-6 md:gap-8 py-10 w-full max-w-8xl
-      mx-auto p-8"
+      mx-auto p-4 md:p-8 lg:p-8"
       >
         {cards.map((card) => (
           <div
