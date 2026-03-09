@@ -5,7 +5,7 @@ const core = () => {
       title: "Agile & Collaboration",
       description:
         "Expertise in Scrum and Agile methodologies, focused on delivering high-quality software through iterative cycles. Committed to team collaboration, proactive communication, and shared goals to ensure project success.",
-      data_os: "fade-right",
+      data_os: "fade-up",
     },
     {
       id: "code-quality",
