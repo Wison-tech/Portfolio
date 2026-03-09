@@ -39,9 +39,9 @@ const Stack = () => {
       w-full max-w-8xl mx-auto"
       >
         {/* Function to render lists in separate fields in UI */}
-        {technologies.map((tech, index)=> (
+        {technologies.map((tech)=> (
           <div
-          key={index}
+          key={tech.name}
           className="flex items-center justify-center gap-4 w-full max-w-[160px]
           md:max-w-[250px] py-3 border rounded-full border-gray-600 transition-all
           hover:border-white"
