@@ -7,9 +7,9 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [loadSpline, setLoadSpline] = useState(false);
 
-  useEffect(() => {
-    // 1. Detección de dispositivo para evitar cargar Spline en móviles
+useEffect(() => {
     const checkDevice = () => {
       setIsMobile(window.innerWidth < 1024);
     };
@@ -17,14 +17,23 @@ const Hero = () => {
     checkDevice();
     window.addEventListener("resize", checkDevice);
 
-    // 2. Inicialización de AOS con ajustes de rendimiento
+    // 1. Inicializar AOS inmediatamente
     AOS.init({
       duration: 800,
       once: true,
-      disable: 'mobile', // Desactivar en móvil para máxima fluidez
+      disable: 'mobile',
     });
 
-    return () => window.removeEventListener("resize", checkDevice);
+    // 2. Retrasar la carga de Spline para que AOS termine sus animaciones
+    // 1000ms es suficiente para que el texto ya haya entrado fluidamente
+    const timer = setTimeout(() => {
+      setLoadSpline(true);
+    }, 1500);
+
+    return () => {
+      window.removeEventListener("resize", checkDevice);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
@@ -119,7 +128,7 @@ const Hero = () => {
       >
         {isMobile ? (
           /* Renderiza solo imagen en Celulares/Tablets */
-          <div className=" absolute top-[-10%] w-full h-full flex p-7">
+          <div className=" absolute top-[-10%] w-full h-full flex p-7 items-center justify-center">
             <img
               src={splineImg}
               alt="Wilson Tech Visual"
@@ -127,7 +136,7 @@ const Hero = () => {
               data-aos="fade-up"
             />
           </div>
-        ) : (
+        ) : loadSpline &&(
           /* Renderiza Spline solo en Desktop */
           <Spline
         data-aos="fade-zoom-in"
