@@ -10,14 +10,15 @@ const Hero = () => {
       duration: 1500,
       once: true,
     });
-  });
+  }, []);
 
   return (
     <main
       className="flex lg:mt-20 flex-col lg:flex-row
   items-center justify-between 
   min-h-[calc(90vh-6rem)]
-  px-6 sm:px-10 lg:px-20">
+  px-6 sm:px-10 lg:px-20"
+    >
       <div
         data-aos="fade-right"
         data-aos-offset="300"
@@ -37,7 +38,7 @@ const Hero = () => {
             bg-black rounded-full flex items-center
             justify-center gap-1"
           >
-            <i class="bx bx-diamond"></i>
+            <i className="bx bx-diamond"></i>
             Wilson Rodriguez
           </div>
         </div>
@@ -71,9 +72,11 @@ const Hero = () => {
             sm:py-3 px-8 sm:px-5 rounded-full sm:text-lg
             text-sm font-semibold tracking-wider transition-all 
             duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a]"
-            href="#"
+            href="https://github.com/Wison-tech"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View GitHub <i class="bx bxl-github"></i>
+            View GitHub <i className="bx bxl-github"></i>
           </a>
 
           <a
@@ -81,11 +84,13 @@ const Hero = () => {
             sm:py-3 px-8 sm:px-7 rounded-full sm:text-lg
             text-sm font-semibold tracking-wider transition-all 
             duration-300 hover:bg-[#1a1a1a] bg-gray-300 text-black hover:text-white"
-            href="#"
+            href="https://www.linkedin.com/in/wilson-mauricio-rodriguez-rodriguez"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Let's Connect{" "}
             <i
-              class="bx 
+              className="bx 
                 bx-link-external"
             ></i>
           </a>

@@ -1,23 +1,36 @@
 import React, { useState, useEffect } from "react";
 
 const DynamicFooter = () => {
-  const [latency, setLatency] = useState(0);
+  const [status, setStatus] = useState({latency: 0, isStable: true})
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
+    let isMounted = true;
     const measureLatency = async () => {
       const start = Date.now();
       try {
-        await fetch("https://www.google.com/favicon.ico", { mode: "no-cors", cache: "no-cache" });
-        const end = Date.now();
-        setLatency(end - start);
+        await fetch("https://www.google.com/favicon.ico", { mode: "no-cors", cache: "no-cache", signal: AbortSignal.timeout(5000) });
+        if (isMounted){
+          const end = Date.now();
+          setStatus({
+            latency: end - start,
+            isStable: true
+          });
+        }
+       
       } catch (e) {
-        setLatency("ERR", e);
+        if(isMounted) {
+          setStatus({latency: "ERR", e, isStable:false});
+        }
+       
       }
     };
     measureLatency();
     const interval = setInterval(measureLatency, 8000);
-    return () => clearInterval(interval);
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    }
   }, []);
 
   return (
@@ -82,8 +95,8 @@ const DynamicFooter = () => {
                 <span className="text-[10px] text-blue-500 font-mono font-bold tracking-tighter leading-none">Stable</span>
              </div>
              <div className="flex items-center gap-2">
-                <div className={`h-1.5 w-1.5 rounded-full ${latency < 150 ? "bg-green-500" : "bg-yellow-500"} animate-pulse`} />
-                <span className="text-[11px] text-gray-300 font-mono font-bold">{latency !== 0 ? `${latency}ms` : "---"}</span>
+                <div className={`h-1.5 w-1.5 rounded-full ${status.latency < 150 ? "bg-green-500" : "bg-yellow-500"} animate-pulse`} />
+                <span className="text-[11px] text-gray-300 font-mono font-bold">{status.latency !== 0 ? `${status.latency}ms` : "---"}</span>
              </div>
           </div>
         </div>
