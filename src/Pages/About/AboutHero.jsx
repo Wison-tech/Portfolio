@@ -48,15 +48,15 @@ const AboutHero = () => {
 
         {/* Redes Sociales Rápidas */}
         <div className="flex gap-8 text-2xl">
-          <a href="#" className="text-gray-500 hover:text-white transition-colors duration-300">
+          <a href="https://www.linkedin.com/in/wilson-mauricio-rodriguez-rodriguez" target="_blank" className="text-gray-500 hover:text-white transition-colors duration-300">
             <i className="bx bxl-linkedin-square"></i>
           </a>
-          <a href="#" className="text-gray-500 hover:text-white transition-colors duration-300">
+          <a href="https://github.com/Wison-tech" target="_blank" className="text-gray-500 hover:text-white transition-colors duration-300">
             <i className="bx bxl-github"></i>
           </a>
-          <a href="#" className="text-gray-500 hover:text-white transition-colors duration-300">
+          {/* <a href="#" className="text-gray-500 hover:text-white transition-colors duration-300">
             <i className="bx bxl-instagram"></i>
-          </a>
+          </a> */}
         </div>
       </div>
 
