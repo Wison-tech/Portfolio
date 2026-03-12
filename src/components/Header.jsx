@@ -62,9 +62,9 @@ const Header = () => {
       >
         <nav className="flex flex-col gap-10 items-center text-2xl text-white">
           <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/">HOME</Link>
-          <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/About">ABOUT ME</Link>
-          <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/Projects">PROJECTS</Link>
-          <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/Contact">CONTACT ME</Link>
+          <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/about">ABOUT ME</Link>
+          <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/projects">PROJECTS</Link>
+          <Link onClick={toggleMobileMenu} className="no-underline text-white" to="/contact">CONTACT ME</Link>
           
           <a
             href={cvUrl}
