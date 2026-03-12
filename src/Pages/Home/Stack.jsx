@@ -1,4 +1,5 @@
 const Stack = () => {
+  
 // List with the names and icons of programming languages
   const technologies = [
     {name: "React", icon: "bxl-react", color: "#61DAFB"},

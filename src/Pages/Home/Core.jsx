@@ -1,4 +1,7 @@
-const core = () => {
+
+
+const Core = () => {
+
   const cards = [
     {
       id: "agile-collaboration",
@@ -68,4 +71,4 @@ const core = () => {
   );
 };
 
-export default core;
+export default Core;

@@ -1,4 +1,8 @@
+
+
+
 const BentoItem = ({ children, span = "md:col-span-1" }) => (
+    
   <div
     data-aos="fade-up"
     data-aos-anchor-placement="bottom-bottom"
@@ -12,6 +16,7 @@ const BentoItem = ({ children, span = "md:col-span-1" }) => (
 );
 
 const Collage = () => {
+
   return (
     <main className="min-h-screen py-12 px-4 sm:px-10 lg:px-20 text-gray-300">
       <section className="max-w-max mx-auto">

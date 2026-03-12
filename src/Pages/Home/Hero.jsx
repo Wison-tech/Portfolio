@@ -20,8 +20,7 @@ useEffect(() => {
     // 1. Inicializar AOS inmediatamente
     AOS.init({
       duration: 800,
-      once: true,
-      disable: 'mobile',
+      once: false,
     });
 
     // 2. Retrasar la carga de Spline para que AOS termine sus animaciones
