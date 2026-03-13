@@ -5,11 +5,13 @@ import Home from "./Pages/Home/Home";
 import DynamicFooter from "./components/DynamicFooter";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 // import Projects from "./Pages/Projects";
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
 
       <Routes>
