@@ -22,7 +22,7 @@ const Header = () => {
       
       {/* LOGO - Alineado con el diseño AZOTH Evolves */}
       <Link to="/" className="z-50 no-underline">
-        <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter leading-none m-0">
+        <h2 translate="no" className="text-4xl md:text-5xl font-black text-white italic tracking-tighter leading-none m-0">
           AZOTH
         </h2>
       </Link>
