@@ -4,8 +4,8 @@ import Header from "./components/Header";
 import Home from "./Pages/Home/Home";
 import DynamicFooter from "./components/DynamicFooter";
 import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
 // import Projects from "./Pages/Projects";
-// import Contact from "./Pages/Contact";
 
 export default function App() {
   return (
@@ -16,7 +16,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         {/* <Route path="/projects" element={<Projects />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <DynamicFooter />
     </>
