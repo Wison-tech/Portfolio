@@ -33,7 +33,7 @@ const ContactMe = () => {
     // Paso 2: Envío forzando el uso de la Public Key
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(() => {
-        alert('DATA UPLINK SUCCESSFUL: Message transmitted to AZOTH node.');
+        // alert('DATA UPLINK SUCCESSFUL: Message transmitted to AZOTH node.');
         setFormData({ name: '', email: '', message: '' });
       })
       .catch((error) => {
