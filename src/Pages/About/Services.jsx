@@ -5,75 +5,77 @@ import "boxicons/css/boxicons.min.css";
 
 const Services = () => {
   useEffect(() => {
-    // Inicialización de animaciones con una duración estándar
     AOS.init({ duration: 800, once: false });
   }, []);
 
-  const whatsappUrl = "https://wa.me/573242332549?text=Hello%20Wilson,%20I%20am%20interested%20in%20your%20services%20regarding%20";
+  // Mensaje de WhatsApp actualizado a tono corporativo
+  const whatsappUrl =
+    "https://wa.me/573242332549?text=Hello%20AZOTH%20Team,%20I%20am%20interested%20in%20your%20expertise%20regarding%20";
 
   const services = [
     {
       step: "01",
-      title: "Product Architecture",
-      description: "Designing scalable digital foundations using React, Django, and modern cloud infrastructure.",
-      icon: "bx-layer"
+      title: "Enterprise Architecture",
+      description:
+        "Engineering scalable, high-availability digital foundations using React, Django, and professional cloud infrastructure.",
+      icon: "bx-layer",
     },
     {
       step: "02",
-      title: "AI & RAG Integration",
-      description: "Implementing intelligent systems and neural networks to automate complex business logic.",
-      icon: "bx-brain"
+      title: "AI & RAG Solutions",
+      description:
+        "Deploying intelligent neural networks and RAG systems to automate complex business logic and data retrieval.",
+      icon: "bx-brain",
     },
     {
       step: "03",
-      title: "Native Mobile Apps",
-      description: "High-performance mobile experiences built with Jetpack Compose (Kotlin) and Flutter.",
-      icon: "bx-mobile-alt"
+      title: "Multiplatform Systems",
+      description:
+        "Performance-driven mobile and desktop ecosystems built with Jetpack Compose, Flutter, and .NET Core.",
+      icon: "bx-mobile-alt",
     },
     {
       step: "04",
-      title: "3D Modeling & Assets",
-      description: "High-fidelity 3D models created in Blender for web integration and digital storytelling.",
-      icon: "bx-cube"
+      title: "High-Fidelity 3D Assets",
+      description:
+        "Premium 3D modeling and environment design in Blender, optimized for web integration and immersive experiences.",
+      icon: "bx-cube",
     },
     {
       step: "05",
-      title: "Motion & Visual Content",
-      description: "Premium post-production using After Effects, Premiere, and Photoshop for digital assets.",
-      icon: "bx-video-recording"
-    }
+      title: "Visual Brand Systems",
+      description:
+        "Advanced post-production and digital asset creation using the Adobe Creative Suite for high-impact brand storytelling.",
+      icon: "bx-video-recording",
+    },
   ];
 
   return (
-    /* CORRECCIÓN DE SCROLL: 
-       - Usamos 'overflow-x-clip' para evitar scroll horizontal por los brillos azules.
-       - Eliminamos 'h-screen' o cualquier altura fija para que el scroll sea el de la página principal.
-       - El padding coincide con el de tu Navbar y Hero para alineación perfecta.
-    */
     <section className="relative pt-20 pb-20 px-6 sm:px-10 lg:px-20 text-white overflow-x-clip bg-transparent">
-      
-      {/* Glow ambiental corregido para no bloquear clics (pointer-events-none) */}
+      {/* Glow ambiental */}
       <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-600/5 blur-[120px] rounded-full -z-0 pointer-events-none"></div>
 
-      {/* ALINEACIÓN AZOTH: 
-          Hemos quitado 'max-w-7xl mx-auto' para que los títulos se alineen al borde 
-          izquierdo igual que el logo de tu cabecera.
-      */}
       <div className="relative z-10">
-        
         <div className="mb-12" data-aos="fade-up">
           <span className="text-blue-500 font-mono tracking-[0.3em] uppercase text-[10px] mb-2 block">
-            / Expertise & Creative
+            / Engineering & Creative
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tighter uppercase">
-            Services & <span translate="no" className="text-transparent italic" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>Solutions</span>
+            Studio{" "}
+            <span
+              translate="no"
+              className="text-transparent italic"
+              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.3)" }}
+            >
+              Capabilities
+            </span>
           </h2>
         </div>
 
-        {/* Grid de servicios con arquitectura Bento Box */}
+        {/* Grid Bento Box */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 50}
@@ -82,7 +84,6 @@ const Services = () => {
                 ${index === 2 ? "md:col-span-2 lg:col-span-2" : "md:col-span-1"}
               `}
             >
-              {/* Reflejo de luz en la esquina al pasar el mouse */}
               <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-500/5 blur-[40px] rounded-full group-hover:bg-blue-500/15 transition-all duration-500 pointer-events-none"></div>
 
               <div className="relative z-10 h-full flex flex-col">
@@ -98,14 +99,13 @@ const Services = () => {
                 <h3 className="text-xl lg:text-2xl font-bold mb-3 tracking-tight group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
-                
-                <p className="text-gray-400 leading-relaxed text-sm lg:text-base mb-8">
+
+                <p className="text-gray-400 leading-relaxed text-sm lg:text-base mb-8 font-light">
                   {service.description}
                 </p>
 
-                {/* Botón de acción con WhatsApp */}
                 <div className="mt-auto">
-                  <a 
+                  <a
                     href={`${whatsappUrl}${encodeURIComponent(service.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -113,7 +113,8 @@ const Services = () => {
                                opacity-100 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 
                                transition-all duration-300 hover:text-blue-300 font-bold"
                   >
-                    Get this service <i className="bx bx-right-arrow-alt text-lg"></i>
+                    Request consultation{" "}
+                    <i className="bx bx-right-arrow-alt text-lg"></i>
                   </a>
                 </div>
               </div>

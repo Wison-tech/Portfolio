@@ -51,7 +51,7 @@ const Hero = () => {
       >
         {/* Tag Wilson Rodriguez */}
         <div
-          className="relative w-[95%] sm:w-48 h-10
+          className="relative w-[95%] sm:w-64 h-10
           bg-gradient-to-r from-[#132542] to-[#3B82F6]
           shadow-[0_0_15px_rgba(255,255,255,0.4)]
           rounded-full"
@@ -59,10 +59,10 @@ const Hero = () => {
           <div
             className="absolute inset-[3px]
             bg-black rounded-full flex items-center
-            justify-center gap-1 text-white"
+            justify-center gap- text-white"
           >
             <i className="bx bx-diamond"></i>
-            Wilson Rodriguez
+           SOFTWARE ARCHITECTURE
           </div>
         </div>
 
@@ -71,7 +71,7 @@ const Hero = () => {
           className="text-3xl sm:text-4xl md:text-5xl
           lg:text-6xl font-semibold tracking-wider my-5 text-white"
         >
-          Software Architecture & Digital Solutions
+          Enterprise Software Solutions
         </h1>
 
         <h5

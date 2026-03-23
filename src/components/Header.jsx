@@ -41,7 +41,7 @@ const Header = () => {
         download="Wilson_Rodriguez_HV.pdf" 
         className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50 no-underline text-center text-sm"
       >
-        Download Hv
+        Solutions Deck
       </a>
 
       {/* Botón Menú Móvil */}
@@ -72,7 +72,7 @@ const Header = () => {
             onClick={toggleMobileMenu}
             className="mt-6 bg-white text-black py-4 px-10 rounded-full font-bold no-underline"
           >
-            DOWNLOAD HV
+            Solutions Deck
           </a>
         </nav>
       </div>
