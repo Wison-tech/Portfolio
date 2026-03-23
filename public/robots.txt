@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://azoth-dev.vercel.app/sitemap.xml
