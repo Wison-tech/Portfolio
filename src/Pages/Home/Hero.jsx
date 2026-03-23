@@ -17,14 +17,11 @@ const Hero = () => {
     checkDevice();
     window.addEventListener("resize", checkDevice);
 
-    // 1. Inicializar AOS inmediatamente
     AOS.init({
       duration: 800,
       once: false,
     });
 
-    // 2. Retrasar la carga de Spline para que AOS termine sus animaciones
-    // 1000ms es suficiente para que el texto ya haya entrado fluidamente
     const timer = setTimeout(() => {
       setLoadSpline(true);
     }, 1500);
@@ -49,103 +46,100 @@ const Hero = () => {
         data-aos-easing="ease-in-sine"
         className="max-w-xl z-10 mt-[80%] md:mt-[50%] lg:mt-0"
       >
-        {/* Tag Wilson Rodriguez */}
+        {/* Badge de Protocolo / Área */}
         <div
-          className="relative w-[95%] sm:w-64 h-10
+          className="relative w-[95%] sm:w-72 h-10
           bg-gradient-to-r from-[#132542] to-[#3B82F6]
-          shadow-[0_0_15px_rgba(255,255,255,0.4)]
+          shadow-[0_0_15px_rgba(59,130,246,0.3)]
           rounded-full"
         >
           <div
-            className="absolute inset-[3px]
+            className="absolute inset-[1px]
             bg-black rounded-full flex items-center
-            justify-center gap- text-white"
+            justify-center gap-2 text-white font-mono text-[11px] tracking-[0.2em]"
           >
-            <i className="bx bx-diamond"></i>
-           SOFTWARE ARCHITECTURE
+            <i className="bx bx-shield-quarter text-blue-500"></i>
+            SYSTEMS ARCHITECTURE
           </div>
         </div>
 
-        {/* Heading Principal */}
+        {/* Heading Principal: Impacto Corporativo */}
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl
-          lg:text-6xl font-semibold tracking-wider my-5 text-white"
+          className="text-4xl sm:text-5xl md:text-6xl
+          lg:text-7xl font-black tracking-tighter my-6 text-white leading-none uppercase italic"
         >
-          Enterprise Software Solutions
+          Advanced Engineering
+         
         </h1>
 
         <h5
           translate="no"
-          className="my-5 text-1xl font-regular tracking-wider
-          text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
+          className="my-5 text-sm font-mono tracking-[0.3em]
+          text-blue-500/80 max-w-[25rem] lg:max-w-[30rem] uppercase"
         >
-          React · Flutter · Django · PostgreSQL · Docker
+          Scalable · Robust · Intelligent
         </h5>
 
-        {/* Descripción */}
+        {/* Descripción: Enfoque en soluciones, no en tareas */}
         <p
-          className="text-base sm:text-lg tracking-wider
-          text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
+          className="text-base sm:text-lg tracking-wide
+          text-gray-400 max-w-[25rem] lg:max-w-[35rem] leading-relaxed font-light"
         >
-          Building modern web and mobile solutions with React, Flutter, and
-          Django. Focused on scalable backend architectures and seamless user
-          experiences.
+          Specialized in deploying high-performance digital ecosystems. From
+          complex backend infrastructures to intuitive multi-platform
+          interfaces, we stabilize your technological node.
         </p>
 
-        {/* Botones de Acción */}
-        <div className="flex flex-wrap mt-12 items-center justify-center gap-4 lg:justify-start md:justify-start">
+        {/* Botones de Acción: Más profesionales */}
+        <div className="flex flex-wrap mt-12 items-center justify-center gap-5 lg:justify-start md:justify-start">
           <a
-            className="border border-[#2a2a2a] py-2
-            sm:py-3 px-6 sm:px-5 rounded-full sm:text-lg
-            text-sm font-semibold tracking-wider transition-all 
-            duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a] text-white"
+            className="group relative overflow-hidden border border-blue-500/30 py-3 px-8 rounded-lg 
+            text-sm font-bold tracking-[0.2em] transition-all 
+            duration-300 bg-blue-600/10 hover:bg-blue-600/20 text-white flex items-center gap-2"
             href="https://github.com/Wison-tech"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View GitHub <i className="bx bxl-github"></i>
+            SOURCE_CODE{" "}
+            <i className="bx bxl-github group-hover:rotate-12 transition-transform"></i>
           </a>
 
           <a
-            className="border border-[#2a2a2a] py-2 
-            sm:py-3 px-6 sm:px-7 rounded-full sm:text-lg
-            text-sm font-semibold tracking-wider transition-all 
-            duration-300 hover:bg-[#1a1a1a] bg-gray-300 text-black hover:text-white"
+            className="border border-white/10 py-3 px-8 rounded-lg
+            text-sm font-bold tracking-[0.2em] transition-all 
+            duration-300 hover:bg-white hover:text-black bg-transparent text-white flex items-center gap-2"
             href="https://www.linkedin.com/in/wilson-mauricio-rodriguez-rodriguez"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Let's Connect <i className="bx bx-link-external"></i>
+            NETWORK_ID <i className="bx bx-terminal"></i>
           </a>
         </div>
       </div>
 
-      {/* Contenedor del Visual (3D o Imagen) */}
+      {/* Visual Container */}
       <div
         className="absolute top-[-15%] lg:top-[-20%] bottom-0 lg:left-[25%]
         sm:left-[-2%] h-full w-full lg:w-[70%] z-0 pointer-events-none"
       >
         {isMobile ? (
-          /* Renderiza solo imagen en Celulares/Tablets */
-          <div className=" absolute top-[-10%] w-full h-full flex p-7 items-center justify-center">
+          <div className="absolute top-[-10%] w-full h-full flex p-7 items-center justify-center">
             <img
               src={splineImg}
-              alt="Wilson Tech Visual"
-              className="w-full max-w-[500px] h-auto object-contain opacity-60 mt-20"
+              alt="Azoth Visual System"
+              className="w-full max-w-[500px] h-auto object-contain opacity-40 mt-20 grayscale hover:grayscale-0 transition-all duration-700"
               data-aos="fade-up"
             />
           </div>
         ) : (
           loadSpline && (
-            /* Renderiza Spline solo en Desktop */
             <Spline
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="300"
               data-aos-offset="0"
               data-aos-duration="1500"
-              className="absolute top-[20%] bottom-0 lg:left-[25%]
- sm:left-[-2%] h-full"
+              className="absolute top-[20%] bottom-0 lg:left-[25%] sm:left-[-2%] h-full"
               scene="https://draft.spline.design/qvfJC-1LzYaY1Sfw/scene.splinecode"
             />
           )

@@ -1,8 +1,4 @@
-
-
-
 const BentoItem = ({ children, span = "md:col-span-1" }) => (
-    
   <div
     data-aos="fade-up"
     data-aos-anchor-placement="bottom-bottom"
@@ -16,15 +12,15 @@ const BentoItem = ({ children, span = "md:col-span-1" }) => (
 );
 
 const Collage = () => {
-
   return (
     <section className="min-h-screen py-12 px-4 sm:px-10 lg:px-20 text-gray-300">
       <section className="max-w-max mx-auto">
-        <header className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-white uppercase">
-            Development Philosophy
+        <header className="text-center mb-8">
+          <h2 className="text-3xl lg:text-5xl font-black tracking-tighter mb-4 text-white uppercase italic">
+           Engineering <span className="text-gray-400">Excellence</span>
           </h2>
-          <div className="h-1 w-20 bg-blue-600 mx-auto rounded-full" />
+          {/* Separador minimalista: línea gris sutil */}
+          <div className="h-[1px] w-24 bg-gray-800 mx-auto" />
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[380px]">
@@ -48,21 +44,21 @@ const Collage = () => {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white uppercase tracking-tight">
-                  Scalable Architecture
+                  System Scalability
                 </h3>
               </div>
               <p className="text-gray-400 leading-relaxed text-sm lg:text-base">
-                I design systems based on **SOLID** principles and **Clean
-                Architecture**. My focus lies in creating decoupled services
-                that allow for constant software evolution without compromising
-                core stability.
+                Engineering based on **SOLID** principles and **Clean
+                Architecture**. We implement decoupled services that allow for
+                constant software evolution without compromising core system
+                stability.
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {[
-                  "Dry Principles",
+                  "Dry Methodology",
                   "Design Patterns",
                   "Unit Testing",
-                  "Modularized",
+                  "Modular Systems",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -81,20 +77,19 @@ const Collage = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <span className="text-orange-400 font-bold text-xs font-mono uppercase tracking-widest">
-                    3D Workflow
+                    Visual Systems
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-white">
-                  Blender Integration
+                  Spatial Integration
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  Crafting high-fidelity 3D assets and environments. I leverage
-                  **Blender** to bridge the gap between static design and
-                  immersive digital experiences.
+                  Advanced 3D asset pipeline. Leveraging **Blender** to bridge
+                  the gap between static interfaces and immersive digital
+                  experiences.
                 </p>
               </div>
               <div className="relative h-24 mt-8 bg-white/5 rounded-xl border border-white/5 flex items-center justify-center overflow-hidden">
-                {/* Wireframe effect */}
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
                 <div className="relative group-hover:scale-110 transition-transform duration-500">
                   <svg
@@ -116,17 +111,17 @@ const Collage = () => {
             <div className="flex flex-col h-full justify-between">
               <div className="space-y-4">
                 <h3 className="text-xl font-bold text-white">
-                  Efficiency First
+                  High-Load Logic
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  Implementing caching strategies and database query
-                  optimization to minimize latency in high-demand environments.
+                  Strategic caching and database query optimization to ensure
+                  low-latency responses in high-demand production environments.
                 </p>
               </div>
               <div className="bg-black/40 border border-white/5 rounded-2xl p-4 font-mono text-[10px] space-y-2 mt-8">
                 <div className="flex justify-between text-gray-500 font-bold tracking-tighter">
-                  <span>OPTIMIZATION_ENGINE</span>
-                  <span className="text-green-500">ACTIVE</span>
+                  <span>CORE_EFFICIENCY</span>
+                  <span className="text-green-500">OPTIMIZED</span>
                 </div>
                 <div className="w-full h-1 bg-white/5 rounded-full">
                   <div className="h-full w-full bg-blue-500 animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.4)]" />
@@ -140,12 +135,12 @@ const Collage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-white uppercase tracking-tighter">
-                  Visual Consistency
+                  Visual Integrity
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  Building interfaces that prioritize usability. I apply
-                  **Atomic Design** workflows to ensure visual harmony across
-                  every component, from 2D UI to 3D spatial elements.
+                  Applying **Atomic Design** to ensure cross-platform harmony.
+                  Every interface is audited for semantic precision and
+                  high-performance usability.
                 </p>
                 <div className="flex items-center gap-6 border-t border-white/10 pt-4">
                   <div className="flex flex-col text-center">
@@ -161,7 +156,7 @@ const Collage = () => {
                       SEO
                     </span>
                     <span className="text-[10px] text-gray-500 uppercase font-bold text-left tracking-widest">
-                      Semantic
+                      Semantics
                     </span>
                   </div>
                   <div className="flex flex-col text-center">
@@ -169,7 +164,7 @@ const Collage = () => {
                       A11Y
                     </span>
                     <span className="text-[10px] text-gray-500 uppercase font-bold text-left tracking-widest">
-                      Friendly
+                      Compliance
                     </span>
                   </div>
                 </div>
@@ -186,7 +181,7 @@ const Collage = () => {
                 <div className="relative z-10 text-center space-y-2">
                   <div className="px-4 py-2 bg-[#18181b] border border-white/10 rounded-lg shadow-2xl">
                     <span className="text-xs font-mono text-blue-400">
-                      DESIGN_SYSTEM_V1.0
+                      NODE_SYSTEM_V1
                     </span>
                   </div>
                 </div>
