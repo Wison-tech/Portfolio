@@ -1,14 +1,33 @@
+import { Helmet } from 'react-helmet-async'; // Importante para SEO
 import ContactMe from "./contactMe";
 
 const Contact = () => {
   return (
-    // overflow-x-hidden es vital para que los brillos no estiren la pantalla a la derecha
     <main className="relative w-full min-h-screen overflow-x-clip ">
-      {/* Gradient Image */}
+      <Helmet>
+        {/* Título específico para la página de contacto */}
+        <title>Contacto | Wilson Rodriguez - AZOTH Solutions</title>
+        
+        {/* Descripción enfocada en la acción de contactar */}
+        <meta name="description" content="¿Tienes un proyecto en mente? Ponte en contacto conmigo para servicios de desarrollo Full Stack, consultoría técnica o colaboraciones profesionales." />
+        
+        {/* URL canónica específica */}
+        <link rel="canonical" href="https://azoth-dev.vercel.app/contact" />
+
+        {/* Open Graph para que al compartir esta sección específica se vea bien */}
+        <meta property="og:title" content="Contacta con Wilson Rodriguez | AZOTH" />
+        <meta property="og:description" content="Hablemos sobre tu próximo proyecto digital. Desarrollo web y móvil de alta calidad." />
+        <meta property="og:url" content="https://azoth-dev.vercel.app/contact" />
+        <meta property="og:image" content="https://azoth-dev.vercel.app/og-expert.png" />
+      </Helmet>
+
+      {/* Gradient Image - SEO: Marcada como decorativa */}
       <img
         className="absolute top-0 right-0 opacity-60 -z-10"
         src="/gradient.png"
-        alt="Gradient-Image"
+        alt="" 
+        role="presentation"
+        loading="lazy"
       />
 
       {/* Blur Effect - Ajustado para ser responsivo y no desbordar */}
