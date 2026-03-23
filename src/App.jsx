@@ -14,7 +14,12 @@ export default function App() {
       {/* Metadatos base que se aplicarán si una página no los define */}
       <Helmet>
         <title>Wilson Rodriguez | Full Stack Developer</title>
-       <meta
+        <meta
+          name="google-site-verification"
+          content="7MYpcBhTP4rNk6Sdokv6579T_t8LjrTjckD76CCjaqQ"
+        />
+
+        <meta
           name="description"
           content="Expert digital solutions and full-stack development. Specialist in React, Python, and scalable architectures. Transforming ideas into high-impact software."
         />
@@ -23,10 +28,7 @@ export default function App() {
         <link rel="canonical" href="https://azoth-dev.vercel.app/" />
 
         {/* Open Graph (Lo que se ve en LinkedIn/WhatsApp) */}
-        <meta
-          property="og:title"
-          content="AZOTH | Expert Digital Solutions"
-        />
+        <meta property="og:title" content="AZOTH | Expert Digital Solutions" />
         <meta
           property="og:description"
           content="Wilson Rodriguez's professional portfolio. Full Stack development of web and mobile applications using modern technologies."
@@ -67,7 +69,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         {/* <Route path="/projects" element={<Projects />} /> */}
         <Route path="/contact" element={<Contact />} />
-        
+
         {/* SEO Tip: En lugar de renderizar Home para rutas inexistentes, 
             es mejor una página 404, pero si prefieres Home, asegúrate de que no genere contenido duplicado */}
         <Route path="*" element={<Home />} />

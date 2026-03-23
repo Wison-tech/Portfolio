@@ -11,6 +11,10 @@ const About = () => {
       <Helmet>
         <title>About Azoth | Software and AI expert in the field</title>
         <meta
+          name="google-site-verification"
+          content="7MYpcBhTP4rNk6Sdokv6579T_t8LjrTjckD76CCjaqQ"
+        />
+        <meta
           name="description"
           content="Azoth's professional background. Specialist in Fullstack development (Laravel/React) and applied Artificial Intelligence in Colombia."
         />

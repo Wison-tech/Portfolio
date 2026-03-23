@@ -13,6 +13,11 @@ const Home = () => {
 
         {/* Descripción: Enfocada en servicios y ubicación (Bogotá/Remoto) */}
         <meta
+          name="google-site-verification"
+          content="7MYpcBhTP4rNk6Sdokv6579T_t8LjrTjckD76CCjaqQ"
+        />
+
+        <meta
           name="description"
           content="Expert digital solutions and full-stack development. Specialist in React, Python, and scalable architectures. Transforming ideas into high-impact software."
         />
@@ -21,10 +26,7 @@ const Home = () => {
         <link rel="canonical" href="https://azoth-dev.vercel.app/" />
 
         {/* Open Graph (Lo que se ve en LinkedIn/WhatsApp) */}
-        <meta
-          property="og:title"
-          content="AZOTH | Expert Digital Solutions"
-        />
+        <meta property="og:title" content="AZOTH | Expert Digital Solutions" />
         <meta
           property="og:description"
           content="Wilson Rodriguez's professional portfolio. Full Stack development of web and mobile applications using modern technologies."
