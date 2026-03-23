@@ -9,10 +9,10 @@ const About = () => {
     <>
       {/* SEO Dinámico para React */}
       <Helmet>
-        <title>Sobre Azoth | Experto en Software e IA en Colombia</title>
+        <title>About Azoth | Software and AI expert in the field</title>
         <meta
           name="description"
-          content="Trayectoria profesional de Azoth. Especialista en desarrollo Fullstack (Laravel/React) e Inteligencia Artificial aplicada en Colombia."
+          content="Azoth's professional background. Specialist in Fullstack development (Laravel/React) and applied Artificial Intelligence in Colombia."
         />
         <link rel="canonical" href="https://tu-dominio.com/about" />
         {/* Open Graph para que al compartir en WhatsApp/LinkedIn se vea profesional */}

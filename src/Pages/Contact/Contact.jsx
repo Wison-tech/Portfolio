@@ -6,7 +6,7 @@ const Contact = () => {
     <main className="relative w-full min-h-screen overflow-x-clip ">
       <Helmet>
         {/* Título específico para la página de contacto */}
-        <title>Contacto | Wilson Rodriguez - AZOTH Solutions</title>
+        <title>Contact | Wilson Rodriguez - AZOTH Solutions</title>
         
         {/* Descripción enfocada en la acción de contactar */}
         <meta name="description" content="Do you have a project in mind? Get in touch with me for Full Stack development services, technical consulting, or professional collaborations." />
