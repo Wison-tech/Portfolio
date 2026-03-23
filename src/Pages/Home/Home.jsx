@@ -60,12 +60,13 @@ const Home = () => {
       </Helmet>
 
       {/* Imagen de gradiente optimizada como decorativa */}
+      {/* Cambios: Quitamos loading="lazy" y añadimos fetchpriority="high" */}
       <img
         className="absolute top-0 right-0 opacity-60 -z-10"
         src="/gradient.png"
         alt=""
         role="presentation"
-        loading="lazy"
+        fetchpriority="high"
       />
 
       {/* Efecto de Blur (Decorativo) */}
