@@ -9,14 +9,14 @@ const Contact = () => {
         <title>Contacto | Wilson Rodriguez - AZOTH Solutions</title>
         
         {/* Descripción enfocada en la acción de contactar */}
-        <meta name="description" content="¿Tienes un proyecto en mente? Ponte en contacto conmigo para servicios de desarrollo Full Stack, consultoría técnica o colaboraciones profesionales." />
+        <meta name="description" content="Do you have a project in mind? Get in touch with me for Full Stack development services, technical consulting, or professional collaborations." />
         
         {/* URL canónica específica */}
         <link rel="canonical" href="https://azoth-dev.vercel.app/contact" />
 
         {/* Open Graph para que al compartir esta sección específica se vea bien */}
-        <meta property="og:title" content="Contacta con Wilson Rodriguez | AZOTH" />
-        <meta property="og:description" content="Hablemos sobre tu próximo proyecto digital. Desarrollo web y móvil de alta calidad." />
+        <meta property="og:title" content="Contact Wilson Rodriguez | AZOTH" />
+        <meta property="og:description" content="Let's talk about your next digital project. High-quality web and mobile development." />
         <meta property="og:url" content="https://azoth-dev.vercel.app/contact" />
         <meta property="og:image" content="https://azoth-dev.vercel.app/og-expert.png" />
       </Helmet>

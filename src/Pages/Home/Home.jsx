@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 import Hero from "./Hero";
 import Stack from "./Stack";
 import Core from "./Core";
@@ -10,37 +10,58 @@ const Home = () => {
       <Helmet>
         {/* Título: Mezcla tu nombre con la marca para mayor impacto SEO */}
         <title>AZOTH - Expert Digital Solutions</title>
-        
+
         {/* Descripción: Enfocada en servicios y ubicación (Bogotá/Remoto) */}
-        <meta name="description" content="Soluciones digitales expertas y desarrollo Full Stack. Especialista en React, Python y arquitecturas escalables. Transformando ideas en software de alto impacto." />
-        
+        <meta
+          name="description"
+          content="Expert digital solutions and full-stack development. Specialist in React, Python, and scalable architectures. Transforming ideas into high-impact software."
+        />
+
         {/* URL canónica */}
         <link rel="canonical" href="https://azoth-dev.vercel.app/" />
 
         {/* Open Graph (Lo que se ve en LinkedIn/WhatsApp) */}
-        <meta property="og:title" content="AZOTH | Soluciones Digitales Expertas" />
-        <meta property="og:description" content="Portafolio profesional de Wilson Rodriguez. Desarrollo Full Stack de aplicaciones web y móviles con tecnologías modernas." />
+        <meta
+          property="og:title"
+          content="AZOTH | Expert Digital Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Wilson Rodriguez's professional portfolio. Full Stack development of web and mobile applications using modern technologies."
+        />
         <meta property="og:url" content="https://azoth-dev.vercel.app/" />
         <meta property="og:type" content="website" />
-        
+
         {/* Imagen OG: Asegúrate de que el archivo en /public se llame exactamente así */}
-        <meta property="og:image" content="https://azoth-dev.vercel.app/og-expert.png" />
+        <meta
+          property="og:image"
+          content="https://azoth-dev.vercel.app/og-expert.png"
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="AZOTH Expert Digital Solutions Logo" />
+        <meta
+          property="og:image:alt"
+          content="AZOTH Expert Digital Solutions Logo"
+        />
 
         {/* Twitter Card para X/Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Wilson Rodriguez | AZOTH" />
-        <meta name="twitter:description" content="Desarrollo Full Stack y soluciones digitales expertas." />
-        <meta name="twitter:image" content="https://azoth-dev.vercel.app/og-expert.png" />
+        <meta name="twitter:title" content="AZOTH" />
+        <meta
+          name="twitter:description"
+          content="Full Stack development and expert digital solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://azoth-dev.vercel.app/og-expert.png"
+        />
       </Helmet>
 
       {/* Imagen de gradiente optimizada como decorativa */}
       <img
         className="absolute top-0 right-0 opacity-60 -z-10"
         src="/gradient.png"
-        alt="" 
+        alt=""
         role="presentation"
         loading="lazy"
       />
@@ -52,7 +73,6 @@ const Home = () => {
       <Stack />
       <Core />
       <Collage />
-      
     </main>
   );
 };

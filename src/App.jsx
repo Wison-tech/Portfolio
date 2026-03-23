@@ -14,9 +14,49 @@ export default function App() {
       {/* Metadatos base que se aplicarán si una página no los define */}
       <Helmet>
         <title>Wilson Rodriguez | Full Stack Developer</title>
-        <meta name="description" content="Desarrollador de software especializado en React, Python y Node.js. Mira mi portafolio de proyectos." />
-        <meta property="og:type" content="website" />
+       <meta
+          name="description"
+          content="Expert digital solutions and full-stack development. Specialist in React, Python, and scalable architectures. Transforming ideas into high-impact software."
+        />
+
+        {/* URL canónica */}
+        <link rel="canonical" href="https://azoth-dev.vercel.app/" />
+
+        {/* Open Graph (Lo que se ve en LinkedIn/WhatsApp) */}
+        <meta
+          property="og:title"
+          content="AZOTH | Expert Digital Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Wilson Rodriguez's professional portfolio. Full Stack development of web and mobile applications using modern technologies."
+        />
         <meta property="og:url" content="https://azoth-dev.vercel.app/" />
+        <meta property="og:type" content="website" />
+
+        {/* Imagen OG: Asegúrate de que el archivo en /public se llame exactamente así */}
+        <meta
+          property="og:image"
+          content="https://azoth-dev.vercel.app/og-expert.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="AZOTH Expert Digital Solutions Logo"
+        />
+
+        {/* Twitter Card para X/Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AZOTH" />
+        <meta
+          name="twitter:description"
+          content="Full Stack development and expert digital solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://azoth-dev.vercel.app/og-expert.png"
+        />
       </Helmet>
 
       <ScrollToTop />
