@@ -146,7 +146,7 @@ const Hero = () => {
               data-aos-duration="1500"
               className="absolute top-[20%] bottom-0 lg:left-[25%]
  sm:left-[-2%] h-full"
-              scene="https://draft.spline.design/VKwS9DEkdnA-hAhR/scene.splinecode"
+              scene="https://draft.spline.design/qvfJC-1LzYaY1Sfw/scene.splinecode"
             />
           )
         )}
