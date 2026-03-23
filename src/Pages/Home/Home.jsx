@@ -29,7 +29,7 @@ const Home = () => {
         <meta property="og:title" content="AZOTH | Expert Digital Solutions" />
         <meta
           property="og:description"
-          content="Wilson Rodriguez's professional portfolio. Full Stack development of web and mobile applications using modern technologies."
+          content="Wilson Rodriguez's professional. Full Stack development of web and mobile applications using modern technologies."
         />
         <meta property="og:url" content="https://azoth-dev.vercel.app/" />
         <meta property="og:type" content="website" />

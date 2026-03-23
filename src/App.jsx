@@ -13,7 +13,9 @@ export default function App() {
     <>
       {/* Metadatos base que se aplicarán si una página no los define */}
       <Helmet>
-        <title>Wilson Rodriguez | Full Stack Developer</title>
+        <title>
+          Wilson Rodriguez |Software Architecture & Digital Solutions
+        </title>
         <meta
           name="google-site-verification"
           content="7MYpcBhTP4rNk6Sdokv6579T_t8LjrTjckD76CCjaqQ"
@@ -31,7 +33,7 @@ export default function App() {
         <meta property="og:title" content="AZOTH | Expert Digital Solutions" />
         <meta
           property="og:description"
-          content="Wilson Rodriguez's professional portfolio. Full Stack development of web and mobile applications using modern technologies."
+          content="Azoth's professional. Full Stack development of web and mobile applications using modern technologies."
         />
         <meta property="og:url" content="https://azoth-dev.vercel.app/" />
         <meta property="og:type" content="website" />

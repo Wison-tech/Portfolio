@@ -9,7 +9,7 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [loadSpline, setLoadSpline] = useState(false);
 
-useEffect(() => {
+  useEffect(() => {
     const checkDevice = () => {
       setIsMobile(window.innerWidth < 1024);
     };
@@ -71,10 +71,11 @@ useEffect(() => {
           className="text-3xl sm:text-4xl md:text-5xl
           lg:text-6xl font-semibold tracking-wider my-5 text-white"
         >
-          Full Stack Developer
+          Software Architecture & Digital Solutions
         </h1>
 
-        <h5 translate="no"
+        <h5
+          translate="no"
           className="my-5 text-1xl font-regular tracking-wider
           text-gray-400 max-w-[25rem] lg:max-w-[30rem]"
         >
@@ -114,14 +115,13 @@ useEffect(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Let's Connect{" "}
-            <i className="bx bx-link-external"></i>
+            Let's Connect <i className="bx bx-link-external"></i>
           </a>
         </div>
       </div>
 
       {/* Contenedor del Visual (3D o Imagen) */}
-      <div 
+      <div
         className="absolute top-[-15%] lg:top-[-20%] bottom-0 lg:left-[25%]
         sm:left-[-2%] h-full w-full lg:w-[70%] z-0 pointer-events-none"
       >
@@ -135,18 +135,20 @@ useEffect(() => {
               data-aos="fade-up"
             />
           </div>
-        ) : loadSpline &&(
-          /* Renderiza Spline solo en Desktop */
-          <Spline
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="300"
-        data-aos-offset="0"
-        data-aos-duration="1500"
-        className="absolute top-[20%] bottom-0 lg:left-[25%]
+        ) : (
+          loadSpline && (
+            /* Renderiza Spline solo en Desktop */
+            <Spline
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="300"
+              data-aos-offset="0"
+              data-aos-duration="1500"
+              className="absolute top-[20%] bottom-0 lg:left-[25%]
  sm:left-[-2%] h-full"
-        scene="https://draft.spline.design/VKwS9DEkdnA-hAhR/scene.splinecode"
-      />
+              scene="https://draft.spline.design/VKwS9DEkdnA-hAhR/scene.splinecode"
+            />
+          )
         )}
       </div>
     </section>
