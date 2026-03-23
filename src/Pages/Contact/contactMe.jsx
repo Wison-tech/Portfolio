@@ -26,9 +26,9 @@ const ContactMe = () => {
     e.preventDefault();
     setIsSending(true);
 
-    const SERVICE_ID = 'service_avbx9fi';
-    const TEMPLATE_ID = 'template_ulk063k';
-    const PUBLIC_KEY = 'rnkiCa8F4TaJYzbyy'; // Pasamos la llave aquí para evitar errores de validación
+    const SERVICE_ID = 'service_zrngpsn';
+    const TEMPLATE_ID = 'template_nq3vstd';
+    const PUBLIC_KEY = 'nB8OW3chZIFnC3CJA'; // Pasamos la llave aquí para evitar errores de validación
 
     // Paso 2: Envío forzando el uso de la Public Key
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
