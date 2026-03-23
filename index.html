@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="es"> <head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8" />
     
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="7MYpcBhTP4rNk6Sdokv6579T_t8LjrTjckD76CCjaqQ" />
@@ -12,13 +14,27 @@
     <meta name="author" content="Wilson Rodriguez" />
     <meta name="robots" content="index, follow" />
 
+    <meta property="og:site_name" content="AZOTH" />
     <meta property="og:title" content="AZOTH | Expert Digital Solutions" />
-    <meta property="og:description" content="Full Stack development and high-impact software solutions." />
+    <meta property="og:description" content="Expert Full Stack development and scalable software solutions." />
     <meta property="og:image" content="https://azoth-dev.vercel.app/og-expert.png" />
     <meta property="og:url" content="https://azoth-dev.vercel.app/" />
     <meta property="og:type" content="website" />
 
-  </head>
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "AZOTH",
+      "alternateName": ["Azoth Dev", "Azoth Solutions"],
+      "url" : "https://azoth-dev.vercel.app/"
+    }
+    </script>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AZOTH | Expert Digital Solutions" />
+    <meta name="twitter:image" content="https://azoth-dev.vercel.app/og-expert.png" />
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
