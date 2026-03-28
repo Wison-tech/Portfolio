@@ -39,12 +39,41 @@ const Hero = () => {
       min-h-[calc(90vh-6rem)]
       px-6 sm:px-10 lg:px-20 relative overflow-x-hidden"
     >
+      {/* Visual Container */}
+      <div
+        className="relative lg:absolute top-0 lg:top-[-20%] lg:left-[25%] 
+  h-[350px] sm:h-[450px] lg:h-full w-full lg:w-[70%] z-0 pointer-events-none 
+  flex items-center justify-center"
+      >
+        {isMobile ? (
+          <div className="absolute top-[-10%] w-full h-full flex p-7 items-center justify-center">
+            <img
+              src={splineImg}
+              alt="Azoth Visual System"
+              className="w-full max-w-[500px] h-auto object-contain opacity-40 mt-44"
+              data-aos="fade-up"
+            />
+          </div>
+        ) : (
+          loadSpline && (
+            <Spline
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="300"
+              data-aos-offset="0"
+              data-aos-duration="1500"
+              className="absolute top-[20%] bottom-0 lg:left-[25%] sm:left-[-2%] h-full"
+              scene="https://draft.spline.design/qvfJC-1LzYaY1Sfw/scene.splinecode"
+            />
+          )
+        )}
+      </div>
       {/* Columna de Texto */}
       <div
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
-        className="max-w-xl z-10 mt-[80%] md:mt-[50%] lg:mt-0"
+        className="max-w-xl z-10 mt-10 md:mt-20 lg:mt-0"
       >
         {/* Badge de Protocolo / Área */}
         <div
@@ -69,7 +98,6 @@ const Hero = () => {
           lg:text-7xl font-black tracking-tighter my-6 text-white leading-none uppercase italic"
         >
           Advanced Engineering
-         
         </h1>
 
         <h5
@@ -117,34 +145,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Visual Container */}
-      <div
-        className="absolute top-[-15%] lg:top-[-20%] bottom-0 lg:left-[25%]
-        sm:left-[-2%] h-full w-full lg:w-[70%] z-0 pointer-events-none"
-      >
-        {isMobile ? (
-          <div className="absolute top-[-10%] w-full h-full flex p-7 items-center justify-center">
-            <img
-              src={splineImg}
-              alt="Azoth Visual System"
-              className="w-full max-w-[500px] h-auto object-contain opacity-40 mt-20 grayscale hover:grayscale-0 transition-all duration-700"
-              data-aos="fade-up"
-            />
-          </div>
-        ) : (
-          loadSpline && (
-            <Spline
-              data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="300"
-              data-aos-offset="0"
-              data-aos-duration="1500"
-              className="absolute top-[20%] bottom-0 lg:left-[25%] sm:left-[-2%] h-full"
-              scene="https://draft.spline.design/qvfJC-1LzYaY1Sfw/scene.splinecode"
-            />
-          )
-        )}
-      </div>
+      
     </section>
   );
 };

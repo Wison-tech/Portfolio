@@ -30,7 +30,7 @@ const Core = () => {
   sm:px-10 lg:px-15"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
-        <header className="text-center mb-8">
+        <header className="text-center mb-8 max-w-[90%] sm:max-w-[100%]">
           <h2 className="text-3xl lg:text-5xl font-black tracking-tighter mb-4 text-white uppercase italic">
             Engineering <span className="text-gray-400">Foundations</span>
           </h2>
