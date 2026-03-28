@@ -15,9 +15,10 @@ const Collage = () => {
   return (
     <section className="min-h-screen py-12 px-4 sm:px-10 lg:px-20 text-gray-300">
       <section className="max-w-max mx-auto">
-        <header className="text-center mb-8">
+       
+        <header className="text-center mb-8 max-w-2xl sm:max-w-3xl mx-auto px-6">
           <h2 className="text-3xl lg:text-5xl font-black tracking-tighter mb-4 text-white uppercase italic">
-           Engineering <span className="text-gray-400">Excellence</span>
+            Engineering <span className="text-gray-400">Excellence</span>
           </h2>
           {/* Separador minimalista: línea gris sutil */}
           <div className="h-[1px] w-24 bg-gray-800 mx-auto" />

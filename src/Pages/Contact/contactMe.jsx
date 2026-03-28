@@ -49,7 +49,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 py-24 bg-[#050505]">
+    <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 py-24">
       {/* Glow Ambiental Dinámico */}
       <div
         className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] transition-colors duration-1000 blur-[150px] pointer-events-none ${isSuccess ? "bg-green-500/10" : "bg-blue-600/10"}`}

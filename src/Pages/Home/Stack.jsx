@@ -13,9 +13,10 @@ const Stack = () => {
   return (
     <section className="pt-10 lg:pt-0 flex lg:mt-32 flex-col items-center justify-center px-6 sm:px-10 lg:px-10">
       <div data-aos="fade-up" data-aos-duration="1000">
-        <header className="text-center mb-8">
+       
+        <header className="text-center mb-8 max-w-2xl sm:max-w-3xl mx-auto px-6">
           <h2 className="text-3xl lg:text-5xl font-black tracking-tighter mb-4 text-white uppercase italic">
-            Tech <span className="text-gray-400">Ecosystem</span>
+           Tech <span className="text-gray-400">Ecosystem</span>
           </h2>
           {/* Separador minimalista: línea gris sutil */}
           <div className="h-[1px] w-24 bg-gray-800 mx-auto" />
