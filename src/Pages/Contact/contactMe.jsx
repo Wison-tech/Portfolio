@@ -23,20 +23,20 @@ const ContactMe = () => {
     setFormData({ ...formData, [id]: value });
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
 
-    const SERVICE_ID =  import.meta.env.SERVICE_ID;
-    const TEMPLATE_ID =  import.meta.env.TEMPLATE_ID;
-    const PUBLIC_KEY =  import.meta.env.PUBLIC_KEY;
+    // Acceso correcto a variables de Vite
+    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(() => {
         setIsSuccess(true);
         setFormData({ name: "", email: "", message: "" });
-        // Reset del mensaje de éxito tras 5 segundos
         setTimeout(() => setIsSuccess(false), 5000);
       })
       .catch((error) => {
