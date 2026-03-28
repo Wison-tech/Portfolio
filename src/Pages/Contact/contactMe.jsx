@@ -27,9 +27,9 @@ const ContactMe = () => {
     e.preventDefault();
     setIsSending(true);
 
-    const SERVICE_ID = "service_zrngpsn";
-    const TEMPLATE_ID = "template_nq3vstd";
-    const PUBLIC_KEY = "nB8OW3chZIFnC3CJA";
+    const SERVICE_ID =  import.meta.env.SERVICE_ID;
+    const TEMPLATE_ID =  import.meta.env.TEMPLATE_ID;
+    const PUBLIC_KEY =  import.meta.env.PUBLIC_KEY;
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
